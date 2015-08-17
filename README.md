@@ -8,8 +8,8 @@ Es un sistema web desarrollado en **Java** utilizando **PrimeFaces**. **MongoDB*
 
 Modulos
 
-- Modulo de Horarios ** (80%) **
-- Modulo de Estudiantes ** (60%) **
-- Modulo de Profesores ** (30%) **
-- Modulo de Finanzas ** (50%) **
-- Modulo de Administracion ** complete **
+- Modulo de Horarios **(80%)**
+- Modulo de Estudiantes **(60%)**
+- Modulo de Profesores **(30%)**
+- Modulo de Finanzas **(50%)**
+- Modulo de Administracion **complete**
