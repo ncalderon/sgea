@@ -12,4 +12,4 @@ Modulos
 - Modulo de Estudiantes **(60%)**
 - Modulo de Profesores **(30%)**
 - Modulo de Finanzas **(50%)**
-- Modulo de Administracion **complete**
+- Modulo de Administracion **(complete)**
