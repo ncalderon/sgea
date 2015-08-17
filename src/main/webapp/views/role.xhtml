@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestión de Roles</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <p:commandButton id="openNewDialog" value="Nuevo" onclick="PF('role_new_dlg').show();" type="button" />
+                <!--Dialog New Role-->
+                <p:dialog id="new_dialog" widgetVar="role_new_dlg" modal="true" header="#{!roleBean.updateItem ? 'Nuevo Rol' : 'Editar Rol'}">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Descripcion"/>
+                        <p:inputText value="#{roleBean.roleItem.name}" />
+                        <p:commandButton oncomplete="PF('role_new_dlg').hide();" rendered="#{!roleBean.updateItem}" class="btn btn-default" value="Agregar" action="#{roleBean.add}" update=":containerForm"/>
+                        <p:commandButton oncomplete="PF('role_new_dlg').hide();" rendered="#{roleBean.updateItem}" class="btn btn-default" value="Guardar" action="#{roleBean.save}" update=":containerForm"/>
+                        <p:commandButton onclick="PF('role_new_dlg').hide();" value="Cancelar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+                <!--Role List-->
+                <p:dataTable id="roleDatatable" value="#{roleBean.roleList}" var="roleItem">
+                    <p:column headerText="DESCRIPCION">
+                        <h:outputText value="#{roleItem.name}" />
+                    </p:column>
+                    <!--<p:column headerText="">-->
+                        <!--<p:commandButton id="deleteRoleBtn" update=":containerForm" value="Eliminar" actionListener="#{roleBean.delete(roleItem)}" />-->
+                    <!--</p:column>-->
+                    <p:column headerText="">
+                        <p:commandButton id="editRoleBtn" icon="ui-icon-edit" Title="Editar" action="#{roleBean.edit(roleItem)}" update=":containerForm" oncomplete="PF('role_new_dlg').show();"/>
+                    </p:column>
+                </p:dataTable>
+
+                <h:panelGroup rendered="#{empty roleBean.roleList}">
+                    <p>Tabla vacia, agrega nuevos roles.</p>
+                </h:panelGroup>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,203 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestión de Profesores</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <p:commandButton id="openNewDialog" update=":containerForm:displayEmployee :containerForm:tblschedules :containerForm:tblphones" actionListener="#{employeeBean.refreshItem}"
+                                 value="Nuevo" onclick="PF('new_employee_dlg').show(); return false;" type="button" styleClass="btn-primary"/>
+                <!--Dialog New Student-->
+                <p:dialog id="modal_dialog" widgetVar="new_employee_dlg" modal="true">
+
+                    <h:panelGrid id="displayEmployee" columns="2">
+                        <p:outputLabel value="Nombre:"/>
+                        <p:inputText value="#{employeeBean.employeeItem.firstname}" style="width: 100%;" />
+                        <p:outputLabel value="Apellido:"/>
+                        <p:inputText value="#{employeeBean.employeeItem.lastname}" style="width: 100%;" />
+                        <p:outputLabel for="status" value="Estatus"/>
+                        <p:selectOneMenu id="status" value="#{employeeBean.employeeItem.status}" style="width: 100%">
+                            <f:selectItem itemLabel="activo" itemValue="active"/>
+                            <f:selectItem itemLabel="inactivo" itemValue="inactive"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Tipo de Empleado"/>
+                        <p:selectOneMenu value="#{employeeBean.employeeItem.typeEmployee}" style="width: 100%">
+                            <f:selectItem itemLabel="Maestro" itemValue="teacher"/>
+                            <f:selectItem itemLabel="Gestion Administrativa" itemValue="others"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Tipo Identificacion"/>
+                        <p:selectOneMenu value="#{employeeBean.employeeItem.typeIdentification}" style="width: 100%">
+                            <f:selectItem itemLabel="Seleccione" itemValue="null"/>
+                            <f:selectItem itemLabel="Pasaporte" itemValue="Pasaporte"/>
+                            <f:selectItem itemLabel="Cedula" itemValue="Cedula"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Identificacion:"/>
+                        <p:inputText value="#{employeeBean.employeeItem.identification}" style="width: 100%;"/>
+                        <p:outputLabel value="Horarios"/>
+                        <p:commandButton value="Disponibilidad de Horario" update=":containerForm:panelSchedule" onclick="PF('employee_schedules').show();" style="width: 100%"/>
+                        <p:outputLabel value="Telefonos"/>
+                        <p:commandButton value="Agregar Telefonos" update=":containerForm:panelPhone" onclick="PF('employee_phones').show();" style="width: 100%"/>
+                        <p:commandButton oncomplete="PF('new_employee_dlg').hide();" class="btn btn-default" value="Guardar" action="#{employeeBean.add}" update=":containerForm:employeeDatatable"/>
+                        <p:commandButton onclick="PF('new_employee_dlg').hide();" class="btn btn-default" value="Cerrar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+
+                <!--PhoneList Dialog-->
+                <p:dialog id="phone_list" widgetVar="employee_phones" modal="true" header="Telefonos">
+                    <h:panelGrid id="panelPhone" columns="5" cellpadding="5">
+                        <h:outputLabel for="type" value="Tipo" style="font-weight:bold"/>
+
+                        <p:inputText id="type" value="#{employeeBean.phoneItem.type}" />
+
+                        <h:outputLabel for="value" value="Numero" style="font-weight:bold"/>
+
+                        <p:inputText id="value" value="#{employeeBean.phoneItem.value}" />
+
+                        <p:commandButton class="btn btn-default"
+                                         action="#{employeeBean.addPhone}"
+                                         update=":containerForm:panelPhone :containerForm:tblphones"
+                                         value="Guardar" />
+                    </h:panelGrid>
+                    <br></br>
+                    <!--<h:form id="formPhones">-->
+                        <p:dataTable id="tblphones" var="item" value="#{employeeBean.employeePhones}" widgetVar="phone">
+
+                            <p:column headerText="Tipo">
+                                <h:outputText value="#{item.type}" />
+                            </p:column>
+
+                            <p:column headerText="Numero">
+                                <h:outputText value="#{item.value}" />
+                            </p:column>
+
+                            <p:column headerText="">
+                                <p:commandButton id="deletePhone" update=":containerForm:tblphones" process="@this" value="Eliminar" actionListener="#{employeeBean.deletePhone(item)}" styleClass="btn-danger">
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                    <!--</h:form>-->
+                </p:dialog>
+
+
+
+                <!--ScheduleList Dialog-->
+                <p:dialog id="schedule_list" widgetVar="employee_schedules" modal="true" header="Horarios Disponibles">
+                    <h:panelGrid id="panelSchedule" columns="2" cellpadding="5">
+                        <p:outputLabel for="day" value="Dia" style="font-weight:bold"/>
+                        <p:selectOneMenu id="day" value="#{employeeBean.scheduleItem.day}" style="width: 100%">
+                            <f:selectItem itemLabel="Lunes" itemValue="LUNES"/>
+                            <f:selectItem itemLabel="Martes" itemValue="MARTES"/>
+                            <f:selectItem itemLabel="Miercoles" itemValue="MIERCOLES"/>
+                            <f:selectItem itemLabel="Jueves" itemValue="JUEVES"/>
+                            <f:selectItem itemLabel="Viernes" itemValue="VIERNES"/>
+                        </p:selectOneMenu>
+
+                        <p:outputLabel for="startTime" value="Hora desde" style="font-weight:bold"/>
+                        <p:selectOneMenu id="startTime" value="#{employeeBean.scheduleItem.startTime}" style="width: 100%">
+                            <f:selectItem itemLabel="8 am" itemValue="8"/>
+                            <f:selectItem itemLabel="9 am" itemValue="9"/>
+                            <f:selectItem itemLabel="10 am" itemValue="10"/>
+                            <f:selectItem itemLabel="11 am" itemValue="11"/>
+                            <f:selectItem itemLabel="12 am" itemValue="12"/>
+                            <f:selectItem itemLabel="1 pm" itemValue="13"/>
+                            <f:selectItem itemLabel="2 pm" itemValue="14"/>
+                            <f:selectItem itemLabel="3 pm" itemValue="15"/>
+                            <f:selectItem itemLabel="4 pm" itemValue="16"/>
+                            <f:selectItem itemLabel="5 pm" itemValue="17"/>
+                        </p:selectOneMenu>
+
+                        <p:outputLabel for="endTime" value="Hora hasta" style="font-weight:bold"/>
+                        <p:selectOneMenu id="endTime" value="#{employeeBean.scheduleItem.endTime}" style="width: 100%">
+                            <f:selectItem itemLabel="8 am" itemValue="8"/>
+                            <f:selectItem itemLabel="9 am" itemValue="9"/>
+                            <f:selectItem itemLabel="10 am" itemValue="10"/>
+                            <f:selectItem itemLabel="11 am" itemValue="11"/>
+                            <f:selectItem itemLabel="12 am" itemValue="12"/>
+                            <f:selectItem itemLabel="1 pm" itemValue="13"/>
+                            <f:selectItem itemLabel="2 pm" itemValue="14"/>
+                            <f:selectItem itemLabel="3 pm" itemValue="15"/>
+                            <f:selectItem itemLabel="4 pm" itemValue="16"/>
+                            <f:selectItem itemLabel="5 pm" itemValue="17"/>
+                        </p:selectOneMenu>
+                        <f:facet name="footer">
+                            <p:commandButton class="btn btn-default"
+                                             action="#{employeeBean.addSchedule}"
+                                             update=":containerForm:panelSchedule :containerForm:tblschedules"
+                                             value="Guardar" >
+                            </p:commandButton>
+                        </f:facet>
+                    </h:panelGrid>
+                    <br></br>
+                    <!--<h:form id="formSchedules">-->
+                        <p:dataTable id="tblschedules" var="item" value="#{employeeBean.employeeSchedules}" widgetVar="schedule">
+
+                            <p:column headerText="Dia">
+                                <h:outputText value="#{item.day}" />
+                            </p:column>
+
+                            <p:column headerText="Hora de entrada">
+                                <h:outputText value="#{item.startTime}" />
+                            </p:column>
+
+                            <p:column headerText="Hora de salida">
+                                <h:outputText value="#{item.endTime}" />
+                            </p:column>
+
+                            <p:column headerText="">
+                                <p:commandButton id="deleteSchedule" update=":containerForm:tblschedules" process="@this" value="Eliminar" actionListener="#{employeeBean.deleteSchedule(item)}" styleClass="btn-danger">
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                    <!--</h:form>-->
+                </p:dialog>
+
+                <!--<h:form id="table_content">-->
+                    <p:growl id="messages" showDetail="true"/>
+                    <!--<p:contextMenu for="studentDatatable" widgetVar="cMenu">-->
+                    <!--<p:menuitem value="Edit Cell" icon="ui-icon-search" onclick="PF('list_table').showCellEditor();return false;"/>-->
+                    <!--<p:menuitem value="Hide Menu" icon="ui-icon-close" onclick="PF('cMenu').hide()"/>-->
+                    <!--</p:contextMenu>-->
+                    <!--Student List-->
+
+                    <p:dataTable id="employeeDatatable" value="#{employeeBean.employees}" var="emp"
+                                 widgetVar="list_table">
+
+                        <p:column headerText="NOMBRE">
+                            <h:outputText value="#{emp.firstname}" />
+                        </p:column>
+                        <p:column headerText="APELLIDO">
+                            <h:outputText value="#{emp.lastname}" />
+                        </p:column>
+                        <p:column headerText="TIPO IDENTIFICACION">
+                            <h:outputText value="#{emp.typeIdentification}"/>
+                        </p:column>
+                        <p:column headerText="IDENTIFICACION">
+                            <h:outputText value="#{emp.identification}" />
+                        </p:column>
+                        <p:column headerText="">
+                            <p:commandButton id="editRow" update=":containerForm:displayEmployee :containerForm:tblschedules :containerForm:tblphones"  process="@this" oncomplete="PF('new_employee_dlg').show()" icon="ui-icon-edit" title="Editar">
+                                <f:setPropertyActionListener value="#{emp}" target="#{employeeBean.employeeItem}" />
+                            </p:commandButton>
+                        </p:column>
+                        <!--<p:column headerText="">-->
+                            <!--<p:commandButton id="deleteRow" update=":containerForm:employeeDatatable" process="@this" value="Eliminar" actionListener="#{employeeBean.delete(emp)}" styleClass="btn-danger">-->
+                            <!--</p:commandButton>-->
+                        <!--</p:column>-->
+                    </p:dataTable>
+                <!--</h:form>-->
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

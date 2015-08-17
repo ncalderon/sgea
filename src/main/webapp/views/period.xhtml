@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+
+    </h:head>
+    <h:body>
+        <ui:composition template="/layout/template.xhtml"></ui:composition>
+        <ui:define name="titleContent">
+            Periodos
+        </ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+                <h:panelGrid cellpadding="5" columns="1">
+                    <p:commandButton id="openNewDialog" onclick="PF('new_dialog_dlg').show();" value="Nuevo" type="button" styleClass="btn-primary" />
+                </h:panelGrid>
+                <br/>
+                <p:dialog header="Periodo" id="modal_dialog" widgetVar="new_dialog_dlg" modal="true" position="center">
+                        <h:panelGrid columns="2">
+                            <h:outputLabel for="codigo" value="Codigo"></h:outputLabel>
+                            <p:outputLabel id="codigo" value="#{periodBean.period.id}"></p:outputLabel>
+                            <h:outputLabel for="name" value="Nombre"></h:outputLabel>
+                            <h:inputText id="name" value="#{periodBean.period.name}"></h:inputText>
+                            <h:outputLabel for="dateStarted" value="Fecha de Inicio: " />
+                            <p:calendar value="#{periodBean.period.dateStarted}" id="dateStarted" required="true" />
+                            <h:outputLabel for="dateEnd" value="Fecha de Fin: " />
+                            <p:message  for="dateStarted" display="icon"></p:message>
+                            <p:calendar value="#{periodBean.period.dateEnd}" id="dateEnd" required="true" />
+                            <p:message  for="dateEnd" display="icon"></p:message>
+
+                            <f:facet name="footer">
+                                <p:commandButton oncomplete="PF('new_dialog_dlg').hide();"
+                                                 class="btn btn-default"
+                                                 action="#{periodBean.add}"
+                                                 update=":containerForm"
+                                                 value="Guardar" />
+
+
+                                <p:commandButton onclick="PF('new_dialog_dlg').hide();" class="btn btn-default" value="Cancelar"/>
+                            </f:facet>
+                        </h:panelGrid>
+                </p:dialog>
+
+                <h:form id="table_content">
+                    <p:dataTable id="periodsParent" var="periodItem" value="#{periodBean.periodList}" widgetVar="list_table">
+
+                        <p:column headerText="Codigo">
+                            <h:outputText value="#{periodItem.id}" />
+                        </p:column>
+
+                        <p:column headerText="Name">
+                            <h:outputText value="#{periodItem.name}" />
+                        </p:column>
+
+                        <p:column headerText="Fecha Inicio">
+                            <h:outputText value="#{periodItem.dateStarted}" />
+                        </p:column>
+
+                        <p:column headerText="Fecha Fin">
+                            <h:outputText value="#{periodItem.dateEnd}" />
+                        </p:column>
+
+                    </p:dataTable>
+
+                    <h:panelGroup rendered="#{empty periodBean.periodList}">
+                        <p>Table is empty! Please add new items.</p>
+                    </h:panelGroup>
+                </h:form>
+
+            </h:form>
+        </ui:define>
+
+    </h:body>
+</html>

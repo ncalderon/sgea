@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+
+        <ui:define name="titleContent">Gestión de Periodos</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+                <h:panelGrid cellpadding="5" columns="1">
+                    <p:commandButton id="openNewDialog" onclick="PF('new_dialog_dlg').show();" value="Nuevo" type="button" styleClass="btn-primary" />
+                </h:panelGrid>
+                <br/>
+                <br></br>
+                <p:dialog header="Periodo" id="modal_dialog" widgetVar="new_dialog_dlg" modal="true" position="center">
+                    <h:panelGrid id="display" columns="3">
+                        <!--<h:outputLabel for="codigo" value="Codigo"></h:outputLabel>-->
+                        <!--<p:outputLabel id="codigo" value="#{periodBean.periodItem.id}"></p:outputLabel>-->
+                        <!--<p:message  for="codigo" display="icon"/>-->
+                        <h:outputLabel for="name" value="Nombre"/>
+                        <p:inputText id="name" value="#{periodBean.periodItem.name}" style="width: 100%"/>
+                        <p:message  for="name" display="icon"/>
+                        <h:outputLabel for="dateStarted" value="Fecha de Inicio: " />
+                        <p:calendar value="#{periodBean.periodItem.dateStarted}" id="dateStarted" required="true" style="width: 100%"/>
+                        <p:message  for="dateStarted" display="icon"/>
+                        <h:outputLabel for="dateEnd" value="Fecha de Fin: " />
+                        <p:calendar value="#{periodBean.periodItem.dateEnd}" id="dateEnd" required="true" style="width: 100%"/>
+                        <p:message  for="dateEnd" display="icon"/>
+
+                        <f:facet name="footer">
+                            <p:commandButton oncomplete="PF('new_dialog_dlg').hide();"
+                                             class="btn btn-default"
+                                             action="#{periodBean.add}"
+                                             update=":containerForm"
+                                             value="Guardar" />
+
+
+                            <p:commandButton onclick="PF('new_dialog_dlg').hide();" class="btn btn-default" value="Cancelar"/>
+                        </f:facet>
+                    </h:panelGrid>
+                </p:dialog>
+
+                <h:form id="table_content">
+
+
+                    <p:dataTable id="tblperiodos" var="item" value="#{periodBean.periodList}" widgetVar="list_table"
+                                 >
+
+                        <!--<p:ajax event="rowSelect" listener="#{periodBean.onRowSelect}" update=":containerForm:display" oncomplete="PF('new_dialog_dlg').show()" />
+                        p:ajax event="rowUnselect" listener="#{tableBean.onRowUnselect}" update=":form:growl"/-->
+                        <!--selection="#{periodBean.periodItem}" selectionMode="single"-->
+
+                        <!--selectionMode="single"-->
+                        <!--rowKey="#{periodItem.id}"-->
+                        <!--selection="#{periodBean.periodItem}"-->
+
+                        <!--<p:column headerText="Codigo">-->
+                            <!--<h:outputText value="#{item.id}" />-->
+                        <!--</p:column>-->
+
+                        <p:column headerText="Descripcion">
+                            <h:outputText value="#{item.name}" />
+                        </p:column>
+
+                        <p:column headerText="Fecha Inicio">
+                            <h:outputText value="#{item.dateStarted}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Fecha Fin">
+                            <h:outputText value="#{item.dateEnd}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:outputText>
+                        </p:column>
+
+                        <p:column headerText="">
+                            <p:commandButton id="editRow" update=":containerForm:display"  process="@this" oncomplete="PF('new_dialog_dlg').show()" icon="ui-icon-edit" title="Editar">
+                                <f:setPropertyActionListener value="#{item}" target="#{periodBean.periodItem}" />
+                            </p:commandButton>
+
+                            <!--<f:setPropertyActionListener value="#{periodItem}" target="#{periodBean.periodItem}" />-->
+
+                        </p:column>
+
+                        <p:column headerText="">
+                            <p:commandButton id="deleteRow" update=":containerForm" process="@this" value="Eliminar" actionListener="#{periodBean.deleteRow(item)}" styleClass="btn-danger">
+                            </p:commandButton>
+                            <!--<f:setPropertyActionListener value="#{periodItem}" target="#{periodBean.periodItem}" />-->
+
+                        </p:column>
+                    </p:dataTable>
+
+                    <h:panelGroup rendered="#{empty periodBean.periodList}">
+                        <p>Table is empty! Please add new items.</p>
+                    </h:panelGroup>
+                </h:form>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

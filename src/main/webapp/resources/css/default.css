@@ -1,0 +1,49 @@
+html,body{
+    height: 100%;
+}
+body{
+	padding-top:70px;
+}
+
+.navbar-brand {
+float: left;
+padding: 0px 15px 0px 0px;
+font-size: 18px;
+line-height: 20px;
+width: 195px;
+height: auto;
+}
+
+.navbar-default {
+background-color: #EEEEEE;
+border: none;
+}
+.navbar-nav>li>a {
+line-height: 33px;
+}
+.label-header{
+	font-variant: small-caps;
+	color: #B1B1B1;
+}
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+
+      }
+
+      /* Set the fixed height of the footer here */
+      #push{
+      	height: 60px;
+      }
+      #footer {
+        height: 60px;
+		background-color: #EEEEEE;
+		padding: 10px;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+
+        }
+      }

@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Asistencias</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+                <p:commandButton value="Registrar" styleClass="btn-primary" onclick="PF('assistance_dlg').show();"/>
+                <p:dialog id="new_dialog" widgetVar="assistance_dlg" modal="true">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Estudiante"/>
+                        <p:autoComplete id="id_student"
+                                        completeMethod="#{assistanceBean.findStudent}" var="auto"
+                                        value="#{assistanceBean.transactionItem.idStudent}" effect="fade"
+                                        converter="studentConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{auto.firstname} #{auto.lastname}" itemValue="#{auto}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{assistanceBean.studentSelected}"/>
+                        </p:autoComplete>
+                        <p:outputLabel value="Curso"/>
+                        <p:autoComplete id="id_course"
+                                        completeMethod="#{assistanceBean.findCourse}" var="course"
+                                        value="#{assistanceBean.courseId}" effect="fade"
+                                        converter="courseConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{course.name}" itemValue="#{course}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{assistanceBean.courseSelected}"/>
+                        </p:autoComplete>
+                        <p:outputLabel value="Condicion"/>
+                        <p:selectOneMenu value="#{assistanceBean.transactionItem.value}" style="width: 100%">
+                            <f:selectItem itemValue="P" itemLabel="Presente"/>
+                            <f:selectItem itemValue="A" itemLabel="Ausente"/>
+                            <f:selectItem itemValue="T" itemLabel="Tardanza"/>
+                        </p:selectOneMenu>
+                    </h:panelGrid>
+                </p:dialog>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

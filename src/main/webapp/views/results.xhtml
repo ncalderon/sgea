@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Notas</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <p:inputText id="jsonData" value="#{true}" style="display: none"/>
+                <script type="application/javascript">
+                    //var json = document.getElementById('containerForm:jsonData').value;
+
+
+                </script>
+                <div class="container-fluid" id="results">
+                        </div>
+
+
+            </h:form>
+
+        </ui:define>
+        <ui:define name="scripts">
+            <h:outputScript library="js" name="results.js" />
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>

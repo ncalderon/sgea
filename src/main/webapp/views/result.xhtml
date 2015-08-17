@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+
+        <ui:define name="titleContent">Registro de Resultados</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+                <h:panelGrid id="display" columns="2" >
+                    <p:outputLabel for="subjectCourse" value="Materia" style="font-weight:bold"/>
+                    <p:autoComplete id="subjectCourse"
+                                    completeMethod="#{resultBean.findSubjectCourse}" var="subjectCourse"
+                                    value="#{resultBean.subjectCourse}" effect="fade"
+                                    converter="subjectCourseConverter"
+                                    emptyMessage="No se encuentran resultados."
+                                    itemLabel="#{subjectCourse.subject.name}" itemValue="#{subjectCourse}"
+                                    maxResults="5" queryDelay="300">
+                        <p:ajax event="itemSelect" listener="#{resultBean.subjectCourseSelected}" update=":containerForm"/>
+                    </p:autoComplete>
+                    <p:outputLabel value="Estudiante"/>
+                    <p:autoComplete id="idStudent"
+                                    completeMethod="#{resultBean.findStudent}" var="student"
+                                    converter="studentConverter"
+                                    value="#{resultBean.student}" effect="fade"
+                                    itemLabel="#{student.firstname} #{student.lastname}" itemValue="#{student}"
+                                    emptyMessage="No se encuentran resultados."
+                                    maxResults="5" queryDelay="300">
+                        <p:ajax event="itemSelect" listener="#{resultBean.studentSelected}" update=":containerForm:mainDataTable"/>
+                    </p:autoComplete>
+
+                    <p:commandButton id="openMainDialog" action="#{resultBean.newItem}" update=":containerForm:displayResult"
+                                     value="Nuevo" oncomplete="PF('main_dialog').show();" styleClass="btn-primary">
+                    </p:commandButton>
+                </h:panelGrid>
+
+                <p:dialog id="mainDialog" widgetVar="main_dialog" modal="true" header="Resultado">
+                    <h:panelGrid id="displayResult" columns="2">
+                        <p:outputLabel value="Mes"/>
+                        <p:selectOneMenu value="#{resultBean.result.moth}" style="width: 100%">
+                            <f:selectItem itemLabel="Enero" itemValue="enero"/>
+                            <f:selectItem itemLabel="Febrero" itemValue="febrero"/>
+                            <f:selectItem itemLabel="Marzo" itemValue="Marzo"/>
+                            <f:selectItem itemLabel="Abril" itemValue="Abril"/>
+                            <f:selectItem itemLabel="Mayo" itemValue="Mayo"/>
+                            <f:selectItem itemLabel="Junio" itemValue="Junio"/>
+                            <f:selectItem itemLabel="Julio" itemValue="Julio"/>
+                            <f:selectItem itemLabel="Agosto" itemValue="Agosto"/>
+                            <f:selectItem itemLabel="Septiembre" itemValue="septiembre"/>
+                            <f:selectItem itemLabel="Octubre" itemValue="octubre"/>
+                            <f:selectItem itemLabel="Noviembre" itemValue="Noviembre"/>
+                            <f:selectItem itemLabel="Diciembre" itemValue="Diciembre"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Valor"/>
+                        <p:inputText value="#{resultBean.result.value}" style="width: 100%;"/>
+                        <p:commandButton oncomplete="PF('main_dialog').hide();" class="btn btn-default" value="Guardar" action="#{resultBean.add}" update=":containerForm:mainDataTable"/>
+                        <p:commandButton onclick="PF('main_dialog').hide();" class="btn btn-default" value="Cerrar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+                <p:dataTable id="mainDataTable" value="#{resultBean.results}" var="item" widgetVar="list_table">
+                    <p:column headerText="Fecha">
+                        <h:outputText value="#{item.date}" />
+                    </p:column>
+                    <p:column headerText="Mes">
+                        <h:outputText value="#{item.moth}" />
+                    </p:column>
+                    <p:column headerText="Valor">
+                        <h:outputText value="#{item.value}" />
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton id="deleteRow" update=":containerForm:mainDataTable" process="@this" value="Eliminar" actionListener="#{resultBean.delete(item)}" styleClass="btn-danger">
+                        </p:commandButton>
+                    </p:column>
+                </p:dataTable>
+
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

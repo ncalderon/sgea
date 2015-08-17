@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestion de Configuracion</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+                <p:commandButton value="Nuevo" onclick="PF('config_dlg').show();" styleClass="btn-primary"/>
+                <p:dialog id="new_dialog" widgetVar="config_dlg" modal="true" position="center">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel for="name" value="Descripcion"/>
+                        <p:inputText id="name" value="#{configBean.item.name}"/>
+                        <p:outputLabel for="value" value="Valor"/>
+                        <p:inputText id="value" value="#{configBean.item.value}"/>
+                        <p:commandButton oncomplete="PF('config_dlg').hide();" rendered="#{!configBean.updateItem}" class="btn btn-default" value="Agregar" action="#{configBean.add}" update=":containerForm"/>
+                        <p:commandButton oncomplete="PF('config_dlg').hide();" rendered="#{configBean.updateItem}" class="btn btn-default" value="Guardar" action="#{configBean.save}" update=":containerForm"/>
+                        <p:commandButton value="Cancelar" onclick="PF('config_dlg').hide();" styleClass="btn-danger"/>
+                    </h:panelGrid>
+                </p:dialog>
+                <p:dataTable id="table" widgetVar="config_table" value="#{configBean.configList}" var="configItem">
+                    <p:column headerText="Descripcion">
+                        <h:outputText value="#{configItem.name}"/>
+                    </p:column>
+                    <p:column headerText="Valor">
+                        <h:outputText value="#{configItem.value}"/>
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton title="Editar" action="#{configBean.edit(configItem)}" icon="ui-icon-edit" oncomplete="PF('config_dlg').show();" update=":containerForm" process="@this"/>
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton value="Eliminar" action="#{configBean.delete(configItem)}" update=":containerForm"/>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

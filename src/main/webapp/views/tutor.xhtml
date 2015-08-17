@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+<h:body>
+<ui:composition template="/layout/template.xhtml">
+    <ui:define name="titleContent">Gestion de Tutores</ui:define>
+    <ui:define name="content">
+        <h:form id="containerForm">
+            <h:panelGrid cellpadding="5" columns="1">
+                <p:commandButton value="Nuevo" styleClass="btn-primary" onclick="PF('tutor_new_dlg').show();"/>
+            </h:panelGrid>
+            <p:dialog id="new_dialog" widgetVar="tutor_new_dlg" modal="true" position="center" header="Nuevo Tutor">
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="name" value="Nombre"/>
+                    <p:inputText id="name" value="#{tutorBean.item.firstname}"/>
+                    <p:outputLabel for="lastname" value="Apellido"/>
+                    <p:inputText id="lastname" value="#{tutorBean.item.lastname}"/>
+                    <p:outputLabel for="typeid" value="Tipo Identificacion"/>
+                    <p:selectOneMenu id="typeid" value="#{tutorBean.item.typeIdentification}">
+                        <f:selectItem itemLabel="Seleccione" itemValue=""/>
+                        <f:selectItem itemLabel="Cedula" itemValue="Cedula"/>
+                        <f:selectItem itemLabel="Pasaporte" itemValue="Pasaporte"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel for="identification" value="No. Identificacion"/>
+                    <p:inputText id="identification" value="#{tutorBean.item.identification}"/>
+                    <p:outputLabel for="status" value="Estado"/>
+                    <p:selectOneMenu id="status" value="#{tutorBean.item.status}" style="width: 100%">
+                        <f:selectItem itemLabel="Seleccione" itemValue=""/>
+                        <f:selectItem itemLabel="Activo" itemValue="active"/>
+                        <f:selectItem itemLabel="Inactivo" itemValue="inactive"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel for="phones" value="Telefonos"/>
+                    <p:commandButton id="phones" value="Agregar Telefonos" onclick="PF('phones_dlg').show();" style="width: 100%"/>
+
+                    <p:commandButton oncomplete="PF('tutor_new_dlg').hide();" rendered="#{!tutorBean.updateItem}" class="btn btn-default" value="Agregar" action="#{tutorBean.add}" update=":containerForm"/>
+                    <p:commandButton oncomplete="PF('tutor_new_dlg').hide();" rendered="#{tutorBean.updateItem}" class="btn btn-default" value="Guardar" action="#{tutorBean.save}" update=":containerForm"/>
+                    <p:commandButton id="cancel_btn" value="Cancelar" onclick="PF('tutor_new_dlg').hide();" styleClass="btn-danger"/>
+                </h:panelGrid>
+            </p:dialog>
+
+            <p:dialog id="new_phones_dlg" widgetVar="phones_dlg" modal="true" header="Telefonos">
+                <h:panelGrid columns="2" cellspacing="5">
+                    <p:outputLabel value="Residencial"/>
+
+                    <p:outputLabel value="Celular"/>
+
+                    <p:outputLabel value="Otro"/>
+
+                    <p:dataTable id="new_table" widgetVar="phones_table" var="phone">
+                        <p:column headerText="Tipo">
+
+                        </p:column>
+                        <p:column headerText="Numero">
+
+                        </p:column>
+                    </p:dataTable>
+
+                    <p:commandButton id="add_phones" value="Agregar" onclick="PF('phones_dlg').hide();"/>
+                    <p:commandButton id="cancel_phones" value="Cancelar" onclick="PF('phones_dlg').hide();"/>
+                </h:panelGrid>
+            </p:dialog>
+            <p:dataTable id="tblperiodos" var="item" value="#{tutorBean.tutorList}" widgetVar="list_table">
+
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{item.firstname}" />
+                </p:column>
+
+                <p:column headerText="Apellido">
+                    <h:outputText value="#{item.lastname}" />
+                </p:column>
+
+                <p:column headerText="Tipo Identificacion">
+                    <h:outputText value="#{item.typeIdentification}" />
+                </p:column>
+
+                <p:column headerText="No. Identificacion">
+                    <h:outputText value="#{item.identification}" />
+                </p:column>
+
+                <p:column headerText="Estado">
+                    <h:outputText value="#{item.status}" />
+                </p:column>
+
+
+                <p:column headerText="">
+                    <p:commandButton id="editRow" update=":containerForm"  oncomplete="PF('tutor_new_dlg').show()"
+                                     icon="ui-icon-edit" title="Editar" action="#{tutorBean.edit(item)}"/>
+                </p:column>
+
+                <p:column headerText="">
+                    <p:commandButton id="deleteRow" update=":containerForm" process="@this" value="Eliminar" actionListener="#{tutorBean.delete(item)}" styleClass="btn-danger">
+                    </p:commandButton>
+                    </p:column>
+            </p:dataTable>
+
+            <h:panelGroup rendered="#{empty tutorBean.tutorList}">
+                <p>Table is empty! Please add new items.</p>
+            </h:panelGroup>
+        </h:form>
+    </ui:define>
+  </ui:composition>
+  </h:body>
+</html>

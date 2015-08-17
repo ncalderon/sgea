@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Principal</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" rendered="#{true}">
+                <p:commandButton rendered="#{false}" id="principal" value="temporal"  type="button" />
+                <h1 class="text-info">Bienvenid@ a IBS Academic.</h1><br/>
+                <p:graphicImage alt="ibs" library="img" name="ibs-academic.png" class="img-responsive" />
+
+            </h:form>
+
+
+        </ui:define>
+    </ui:composition>
+
+
+</h:body>
+</html>  

@@ -1,0 +1,19 @@
+Tareas por Hacer a la Brevedad Posible.
+
+Nathaniel
+-Completar la vista schedule.
+-Completar la vista de period.
+-Comprobar que los datos de la vista Employee cumplen con lo necesario para la generacion del horario.
+-Comprobar que los datos de la vista Subject cumplen con lo necesario para la generacion del horario.
+
+Josermando
+-Cambiar las vistas de Role de Bootstrap a Primefaces.
+-Corregir el RoleConverter y la Vista para que cargue la lista de roles en el selectOneMenu.
+-Agregar las listas de telefonos, ya sea en un AccordionPanel u otro Dialog.
+-Eliminar los botones de Eliminar y Editar de las Tablas de los CRUDS.
+
+Angel
+-Crear vista de horarios para estudiantes y horarios.
+-Crear vista de notas para estudiantes.
+-Crear vista de realizar pagos y revisar pagos.
+-Realizar la pantalla de Pago.

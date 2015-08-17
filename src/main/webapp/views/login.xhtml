@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Login de Usuarios</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <!--Dialog New Role-->
+                <p:dialog id="new_dialog" visible="true" widgetVar="login_dlg" modal="true" header="Login" closable="false" resizable="false">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Usuario: "/>
+                        <p:inputText value="#{loginBean.username}" />
+                        <p:outputLabel value="Password: "/>
+                        <p:password value="#{loginBean.password}" />
+                        <p:commandButton class="btn btn-default" value="Login" action="#{loginBean.authentication}" update=":containerForm"/>
+                        <p:outputLabel value="#{loginBean.msj}" />
+                    </h:panelGrid>
+                </p:dialog>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

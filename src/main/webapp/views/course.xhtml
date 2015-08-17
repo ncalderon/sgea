@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestión de Cursos</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+
+                <p:commandButton id="openNewDialog" action="#{courseBean.courseNewItem}" update=":containerForm:display"
+                                 value="Nuevo" oncomplete="PF('main_dialog').show();" styleClass="btn-primary">
+                </p:commandButton>
+
+                <p:commandButton id="genSchedules" action="#{courseBean.generateSchedules}" update=":containerForm:mainDataTable"
+                                 value="Generar Horario" styleClass="btn-primary"
+                        />
+
+                <p:dialog id="mainDialog" widgetVar="main_dialog" modal="true" header="Curso">
+                    <h:panelGrid id="display" columns="2">
+                        <p:outputLabel value="Descripcion"/>
+                        <p:inputText value="#{courseBean.courseItem.name}"/>
+                        <p:outputLabel value="No. Curso"/>
+                        <p:inputText value="#{courseBean.courseItem.numberCourse}"/>
+                        <p:outputLabel value="Estado"/>
+                        <p:selectOneMenu value="#{courseBean.courseItem.status}">
+                            <f:selectItem itemLabel="Seleccione" itemValue=""/>
+                            <f:selectItem itemLabel="Disponible" itemValue="Activo"/>
+                            <f:selectItem itemLabel="No Disponible" itemValue="Inactivo"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Materias"/>
+                        <p:commandButton action="#{courseBean.newSubjectCourse}"
+                                         update=":containerForm:panelSubject :containerForm:tblsubject"
+                                         value="Agregar Materias"
+                                         oncomplete="PF('subject_dialog').show();"
+                                         styleClass="btn-primary"
+                                         style="width: 100%"
+                        />
+
+
+                        <p:commandButton oncomplete="PF('main_dialog').hide();" class="btn btn-default" value="Guardar" action="#{courseBean.add}" update=":containerForm:mainDataTable"/>
+                        <p:commandButton onclick="PF('main_dialog').hide();" value="Cancelar" styleClass="btn-danger"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+                <!--SubjectList Dialog-->
+                <p:dialog id="subjectDialog" widgetVar="subject_dialog" modal="true" header="Materias">
+                    <h:panelGrid id="panelSubject" columns="2" cellpadding="5">
+                        <p:outputLabel for="codigo" value="Codigo" style="font-weight:bold"/>
+                        <p:outputLabel id="codigo" value="#{courseBean.subjectCourse.id}" />
+
+                        <p:outputLabel for="subject" value="Materia" style="font-weight:bold"/>
+                        <p:autoComplete id="subject"
+                                        completeMethod="#{courseBean.findSubject}" var="subject"
+                                        value="#{courseBean.subjectCourse.subject}" effect="fade"
+                                        converter="subjectConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{subject.name}" itemValue="#{subject}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{courseBean.subjectSelected}"/>
+                        </p:autoComplete>
+
+                        <p:outputLabel for="hours" value="Horas" style="font-weight:bold"/>
+                        <p:selectOneMenu id="hours" value="#{courseBean.subjectCourse.hours}" style="width: 100%">
+                        <f:selectItem itemLabel="Seleccione" itemValue="0"/>
+                        <f:selectItem itemLabel="6" itemValue="6"/>
+                        <f:selectItem itemLabel="5" itemValue="5"/>
+                        <f:selectItem itemLabel="4" itemValue="4"/>
+                        <f:selectItem itemLabel="3" itemValue="3"/>
+                        <f:selectItem itemLabel="2" itemValue="2"/>
+                        <f:selectItem itemLabel="1" itemValue="1"/>
+                        </p:selectOneMenu>
+
+                        <h:outputLabel for="teacher" value="Maestro" style="font-weight:bold"/>
+                        <p:autoComplete id="teacher"
+                                        completeMethod="#{courseBean.findEmployee}" var="teacher"
+                                        value="#{courseBean.subjectCourse.teacher}" effect="fade"
+                                        converter="employeeConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{teacher.firstname} #{teacher.lastname}" itemValue="#{teacher}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{courseBean.teacherSelected}"/>
+                        </p:autoComplete>
+
+                        <p:commandButton class="btn btn-default"
+                                         action="#{courseBean.addSubjectCourse}"
+                                         update=":containerForm:panelSubject :containerForm:tblsubject"
+                                         value="Guardar" />
+                    </h:panelGrid>
+                    <br></br>
+
+                    <p:dataTable id="tblsubject" var="item" value="#{courseBean.subjectCourses}" widgetVar="subject">
+                        <p:column headerText="Materia">
+                            <h:outputText value="#{item.subject.name}" />
+                        </p:column>
+
+                        <p:column headerText="Maestro">
+                            <h:outputText value="#{item.teacher.firstname}" />
+                        </p:column>
+
+                        <p:column headerText="Horas">
+                            <h:outputText value="#{item.hours}" />
+                        </p:column>
+
+                        <p:column headerText="">
+                            <p:commandButton id="deletePhone" update=":containerForm:tblsubject" process="@this" value="Eliminar" actionListener="#{courseBean.deleteSubjectCourse(item)}" styleClass="btn-danger">
+                            </p:commandButton>
+                        </p:column>
+                    </p:dataTable>
+
+                </p:dialog>
+
+
+                <!--Course List-->
+                <p:dataTable id="mainDataTable" value="#{courseBean.courseList}" var="item" widgetVar="list_table">
+                    <p:column headerText="DESCRIPCION">
+                        <h:outputText value="#{item.name}" />
+                    </p:column>
+                    <p:column headerText="No. CURSO">
+                        <h:outputText value="#{item.numberCourse}" />
+                    </p:column>
+                    <p:column headerText="ESTADO">
+                        <h:outputText value="#{item.status}" />
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton id="editRow" update=":containerForm:display :containerForm:tblsubject"  action="#{courseBean.editItem(item)}" process="@this" oncomplete="PF('main_dialog').show()" icon="ui-icon-edit" title="Editar">
+                            <!--<f:setPropertyActionListener value="#{item}" target="" />-->
+                        </p:commandButton>
+                    </p:column>
+                    <!--<p:column headerText="">-->
+                        <!--<p:commandButton id="deleteRow" update=":containerForm:mainDataTable" process="@this" value="Eliminar" actionListener="#{courseBean.delete(item)}" styleClass="btn-danger">-->
+                        <!--</p:commandButton>-->
+                    <!--</p:column>-->
+                </p:dataTable>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

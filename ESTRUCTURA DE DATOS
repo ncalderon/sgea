@@ -1,0 +1,173 @@
+[    // USER
+    {
+        "id":"",
+        "username":"",
+        "password": "",
+        // reference: Role
+        "rol": "",
+        // reference: Student
+        "student": "1",
+        // reference: Employee
+        "employee": "1"
+        ,"status": ""
+    },
+
+    // Student
+    {
+        // abstrac class  person    
+        "id": "1"
+        ,"firstname": "nathaniel"
+        ,"lastname": "calderon gonzalez"
+        ,"identification": "20102198"
+        , "typeIdentification": "matricula"
+        ,"status": ""
+        // Embedded: phones
+        ,"phones": [{"type":"telefono", "value":"8092456688"}]
+
+        // class student
+        ,"dateSarted": "dd/mm/yyyy hh:mm:ss"
+        ,"dateEnd": "dd/mm/yyyy hh:mm:ss"
+        // reference : Tutor
+        ,"tutor": "1"
+        ,"course":""
+        // embedded
+        ,"address": {"address":"rosado", "sector":"bello campo", "city":"santo domingo, este", "province":"santo domingo", "country":"RD" }
+    }
+
+    ,// Employees
+    {
+        // abstrac class  person    
+        "id": "1"
+        ,"firstname": "nathaniel"
+        ,"lastname": "calderon gonzalez"
+        ,"identification": "20102198"
+        , "typeIdentification": "matricula"
+        ,"status": ""
+        // Embedded: phones
+        ,"phones": [{"type":"telefono", "value":"8092456688"}]
+
+        // class employee
+
+        // Embedded: schedule
+        ,"scheduleAvailable": [{"day": "", "startTime":"", "endTime":"", "hours_reserved":""}]
+
+    }
+
+    ,// Tutor
+    {
+        // abstrac class  person    
+        "id": "1"
+        ,"firstname": "nathaniel"
+        ,"lastname": "calderon gonzalez"
+        ,"identification": "20102198"
+        , "typeIdentification": "matricula"
+        ,"status": ""
+        // Embedded: phones
+        ,"phones": [{"type":"telefono", "value":"8092456688"}]
+    }
+
+    ,// Course
+    {
+        "id": "1"
+        ,"name": "nathaniel"
+        ,"status": ""
+        // reference : Subjects
+        ,"subjects": [{"id":"1"},{"id":"2"}]
+        // reference
+        ,"grade":{"id":"1", "number":"", "academic_level":""}
+    }
+
+    ,// grade
+    {
+        "id":"1"
+        ,"number":"1"
+        ,"academic_level": ""
+    }
+
+    ,// SubjectCourse
+    {
+        "id":""
+        // reference Subject
+        ,"idSubject":"1"
+        // reference : Employees
+        ,"teacher": "1"
+        ,"hours":"5"
+        // embedded
+        ,"schedule": [{"day":"lunes","startTime":"hh:mm","startEnd":"hh:mm"}]
+
+    }
+
+    ,// Subject
+    {
+        "id": "1"
+        ,"name": "nathaniel"
+        ,"status": "active"
+    }
+
+
+    ,// Period
+    {
+        "id": "1"
+        ,"dateSarted": "dd/mm/yyyy hh:mm:ss"
+        ,"dateEnd": "dd/mm/yyyy hh:mm:ss"
+        // ObjectId del Parent
+        ,"parent":"1"
+        ,"status": ""
+        ,"name": "enero"
+    }
+
+    ,// StudentPeriod
+    {
+        "id": "1"
+        // refrence: Period
+        ,"period": "1"
+        // reference : Courses
+        ,"course": "1"
+        ,"date": "dd/mm/yyyy hh:mm:ss"
+        ,"idStudent": "1"
+    }
+
+    ,// PeriodSubject
+    {
+        "id": "1"
+        // reference: subPeriod
+        ,"idPeriod":"2"
+        ,"idSubjectCourse": "1"
+        ,"average": 60
+        ,"examScore": 25
+        // reference : results
+        , "results":[]
+    }
+
+    ,// Results
+    {
+        "id": "1"
+        // reference : Period (childs)
+        ,"idSubPeriod":"2"
+        ,"value": 80
+    }
+
+    ,// transaction
+    {
+        "id": "1",
+        "event": {"id":"", "name":"", "value":""}
+        ,"idStudent": "1"
+        ,"date": "dd/mm/yyyy hh:mm:ss"
+        ,"value": 80
+    }
+
+    // CLASES SECURITY AND SYSTEM
+
+    ,// Roles
+    {
+        "id": "1"
+        ,"name": "admin"
+    }
+
+    ,// Config
+    {
+        "id": "1"
+        ,"name": ""
+        ,"value": ""
+    }
+]

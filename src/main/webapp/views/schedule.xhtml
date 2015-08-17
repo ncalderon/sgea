@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Horarios</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <p:inputText id="jsonData" value="#{scheduleBean.jsonList}" style="display: none"/>
+                <script type="application/javascript">
+                    //var json = document.getElementById('containerForm:jsonData').value;
+
+
+                </script>
+                <table class="table table-responsive">
+                    <tr>
+                        <td>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>LUNES</th>
+                                </tr>
+                                </thead>
+                                <tbody id="lunes">
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>MARTES</th>
+                                </tr>
+                                </thead>
+                                <tbody id="martes">
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>MIERCOLES</th>
+                                </tr>
+                                </thead>
+                                <tbody id="miercoles">
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>JUEVES</th>
+                                </tr>
+                                </thead>
+                                <tbody id="jueves">
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>VIERNES</th>
+                                </tr>
+                                </thead>
+                                <tbody id="viernes">
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </h:form>
+
+        </ui:define>
+        <ui:define name="scripts">
+            <h:outputScript library="js" name="functions.js" />
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://java.sun.com/jsf/html">
+<h:head>
+    <title>IBS ACADEMIC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content=""/>
+    <meta name="author" content="" />
+    <!-- Bootstrap core CSS -->
+    <h:outputStylesheet library="css" name="bootstrap.css" />
+    <h:outputStylesheet library="css" name="bootstrap-theme.min.css" />
+    <!-- Custom styles for this template -->
+    <h:outputStylesheet library="css" name="default.css" />
+    <style type="text/css">
+
+    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</h:head>
+<h:body>
+    <div id="wrap">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h:graphicImage library="img" name="ibs-academic.png" class="img-responsive" id="headerLogo" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#/">Home</a></li>
+
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h:outputLabel rendered="#{loginBean.loggedIn}" value="Bienvenido #{loginBean.username}"></h:outputLabel><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ver Perfil</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <h:form>
+                                    <p:commandLink styleClass="label label-default"  value="Salir" action="#{loginBean.logout}"/>
+                                    </h:form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div> <!-- /navbar container -->
+        </div> <!-- / navbar -->
+
+        <div class="container">
+            <hr/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <h4><span class="label-header"></span><hr/></h4>
+                        <ul class="nav nav-pills nav-stacked">
+<!--
+                        <h:panelGroup rendered="#{loginBean.currentUser.role.name.equalsIgnoreCase('employee')}">
+-->
+                            <li class="active">
+                                <a href="#" data-toggle="collapse" data-target="#collapseDiv1"><span class="pull-right"><span class="glyphicon glyphicon-chevron-down"></span></span>Maestros</a>
+                            </li>
+                            <ul id="collapseDiv1" class="collapse nav nav-pills nav-stacked">
+                                <li ><a href="/views/assistance.xhtml">Asistencia</a></li>
+                                <li ><a href="/views/result.xhtml">Calificaciones</a></li>
+                            </ul>
+<!--
+                        </h:panelGroup>
+-->
+                            <!--<ul id="collapseDiv2" class="collapse nav nav-pills nav-stacked">-->
+                                <!--<li ><a href="/views/assistance.xhtml">Asistencia</a></li>-->
+                            <!--</ul>-->
+<!--
+                            <h:panelGroup rendered="#{loginBean.currentUser.role.name.equalsIgnoreCase('admin')}">
+-->
+                            <li class="active">
+                                <a href="#" data-toggle="collapse" data-target="#collapseDiv2"><span class="pull-right"><span class="glyphicon glyphicon-chevron-down"></span></span>Gestión</a>
+                            </li>
+                            <ul id="collapseDiv2" class="collapse nav nav-pills nav-stacked">
+                                <li ><a href="/views/subject.xhtml">Materias</a></li>
+                                <li ><a href="/views/course.xhtml">Cursos</a></li>
+                                <li><a href="/views/config.xhtml">Configuracion</a> </li>
+                                <li ><a href="/views/student.xhtml">Estudiantes</a></li>
+                                <li ><a href="/views/employee.xhtml">Empleados</a></li>
+                                <li ><a href="/views/inscription.xhtml">Inscripcion</a> </li>
+
+                            </ul>
+
+                            <li class="active">
+                                <a href="#" data-toggle="collapse" data-target="#collapseDiv3"><span class="pull-right"><span class="glyphicon glyphicon-chevron-down"></span></span>Seguridad</a>
+                            </li>
+                            <ul id="collapseDiv3" class="collapse nav nav-pills nav-stacked">
+                                <li ><a href="/views/user.xhtml">Usuarios</a></li>
+                                <li ><a href="/views/role.xhtml">Roles</a></li>
+                            </ul>
+<!--
+                            </h:panelGroup>
+-->
+
+<!--
+                            <h:panelGroup rendered="#{loginBean.currentUser.role.name.equalsIgnoreCase('student')}">
+-->
+
+                            <li class="active">
+                                <a href="#" data-toggle="collapse" data-target="#collapseDiv4"><span class="pull-right"><span class="glyphicon glyphicon-chevron-down"></span></span>Estudiante</a>
+                            </li>
+                            <ul id="collapseDiv4" class="collapse nav nav-pills nav-stacked">
+                                <li ><a href="/views/schedule.xhtml">Horario</a> </li>
+                            </ul>
+
+<!--
+</h:panelGroup>
+-->
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <h4><span class="label-header">
+                            <ui:insert name="titleContent">
+                            </ui:insert>
+                        </span><hr/></h4>
+                        <div class="container" style="width: auto;">
+                            <ui:insert name="content">
+                            </ui:insert>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /body container -->
+        </div> <!-- /principal container -->
+        <div id="push"></div>
+        <div id="footer" class="footer navbar-fixed-bottom">
+            <div class="container">
+                © IBS, All rights reserved 2014
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<h:outputScript library="js" name="jquery.min.js" />-->
+    <h:outputScript library="js" name="bootstrap.js" />
+    <ui:insert name="scripts">
+    </ui:insert>
+
+</h:body>
+</html>

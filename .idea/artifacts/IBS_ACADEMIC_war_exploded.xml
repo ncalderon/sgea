@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="IBS-ACADEMIC:war exploded">
+    <output-path>$PROJECT_DIR$/target/IBS-ACADEMIC</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="IBS-ACADEMIC/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="IBS-ACADEMIC" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.mongodb.morphia:morphia:0.106" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.11.4" />
+          <element id="library" level="project" name="Maven: org.mongodb:bson:2.11.4" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:4.0" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.5" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.5" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

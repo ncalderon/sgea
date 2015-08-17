@@ -1,0 +1,184 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestión de Estudiantes</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+
+                <p:commandButton id="openNewDialog" action="#{studentBean.newItem}" update=":containerForm:displayStudent :containerForm:tblphones :containerForm:table_address"
+                                 value="Nuevo" oncomplete="PF('new_student_dlg').show();" styleClass="btn-primary"
+                        />
+
+                <!--Dialog New Student-->
+                <p:dialog id="modal_dialog" widgetVar="new_student_dlg" modal="true">
+
+                    <h:panelGrid id="displayStudent" columns="2">
+                        <p:outputLabel value="Nombre:"/>
+                        <p:inputText value="#{studentBean.studentItem.firstname}" style="width: 100%;" />
+                        <p:outputLabel value="Apellido:"/>
+                        <p:inputText value="#{studentBean.studentItem.lastname}" style="width: 100%;" />
+
+                        <p:outputLabel value="Fecha de Inicio:"/>
+                        <p:calendar value="#{studentBean.studentItem.dateStarted}" style="width: 100%;"/>
+                        <p:outputLabel value="Tipo Identificacion"/>
+                        <p:selectOneMenu value="#{studentBean.studentItem.typeIdentification}" style="width: 100%">
+                            <f:selectItem itemLabel="Seleccione" itemValue="null"/>
+                            <f:selectItem itemLabel="Matricula" itemValue="matricula"/>
+                            <f:selectItem itemLabel="Cedula" itemValue="cedula"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Identificacion:"/>
+                        <p:inputText value="#{studentBean.studentItem.identification}" style="width: 100%;"/>
+                        <p:outputLabel for="status" value="Estatus"/>
+                        <p:selectOneMenu id="status" value="#{studentBean.studentItem.status}" style="width: 100%">
+                            <f:selectItem itemLabel="activo" itemValue="active"/>
+                            <f:selectItem itemLabel="inactivo" itemValue="inactive"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Telefonos"/>
+                        <p:commandButton value="Agregar Telefonos" update=":containerForm:panelPhone" onclick="PF('student_phones').show();" style="width: 100%"/>
+                        <p:outputLabel value="Direccion"/>
+                        <p:commandButton value="Agregar Direcciones" onclick="PF('student_addresses').show();" style="width: 100%"/>
+                        <p:outputLabel value="Tutor:"/>
+                        <p:autoComplete id="id_tutor"
+                                        completeMethod="#{studentBean.findTutor}" var="auto"
+                                        value="#{studentBean.studentItem.tutor}" effect="fade"
+                                        converter="tutorConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{auto.firstname} #{auto.lastname}" itemValue="#{auto}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{studentBean.tutorSelected}"/>
+                        </p:autoComplete>
+
+                        <p:commandButton oncomplete="PF('new_student_dlg').hide();" class="btn btn-default" value="Guardar" action="#{studentBean.add}" update=":containerForm:studentDatatable"/>
+                        <p:commandButton onclick="PF('new_student_dlg').hide();" class="btn btn-default" value="Cerrar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+
+                <!--PhoneList Dialog-->
+                <p:dialog id="phone_list" widgetVar="student_phones" modal="true" header="Telefonos">
+                    <h:panelGrid id="panelPhone" columns="5" cellpadding="5">
+                        <h:outputLabel for="type" value="Tipo" style="font-weight:bold"/>
+
+                        <p:inputText id="type" value="#{studentBean.phoneItem.type}" />
+
+                        <h:outputLabel for="value" value="Numero" style="font-weight:bold"/>
+
+                        <p:inputText id="value" value="#{studentBean.phoneItem.value}" />
+
+                        <p:commandButton class="btn btn-default"
+                                         action="#{studentBean.addPhone}"
+                                         update=":containerForm:panelPhone :containerForm:tblphones"
+                                         value="Guardar" />
+                    </h:panelGrid>
+                    <br></br>
+                    <!--<h:form id="formPhones">-->
+                    <p:dataTable id="tblphones" var="item" value="#{studentBean.studentPhones}" widgetVar="phone">
+
+                        <p:column headerText="Tipo">
+                            <h:outputText value="#{item.type}" />
+                        </p:column>
+
+                        <p:column headerText="Numero">
+                            <h:outputText value="#{item.value}" />
+                        </p:column>
+
+                        <p:column headerText="">
+                            <p:commandButton id="deletePhone" update=":containerForm:tblphones" process="@this" value="Eliminar" actionListener="#{studentBean.deletePhone(item)}" styleClass="btn-danger">
+                            </p:commandButton>
+                        </p:column>
+                    </p:dataTable>
+
+                </p:dialog>
+                <!--Address Dialog-->
+                <p:dialog id="address_list" widgetVar="student_addresses" modal="true" header="Direcciones">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Direccion"/>
+                        <p:inputText value="#{studentBean.addressItem.address}"/>
+                        <p:outputLabel value="Pais"/>
+                        <p:inputText value="#{studentBean.addressItem.country}"/>
+                        <p:outputLabel value="Provincia"/>
+                        <p:inputText value="#{studentBean.addressItem.province}"/>
+                        <p:outputLabel value="Ciudad"/>
+                        <p:inputText value="#{studentBean.addressItem.city}"/>
+                        <p:outputLabel value="Sector"/>
+                        <p:inputText value="#{studentBean.addressItem.sector}"/>
+
+                        <p:commandButton value="Agregar"
+                                         action="#{studentBean.addAddress}" update=":containerForm:table_address"/>
+                        <p:commandButton value="Cancelar" onclick="PF('student_addresses').hide();"/>
+                    </h:panelGrid>
+
+                    <p:dataTable id="table_address" widgetVar="new_address" var="Item" value="#{studentBean.studentAddress}">
+                        <p:column headerText="DIRECCION">
+                            <h:outputText value="#{Item.address}"/>
+                        </p:column>
+                        <p:column headerText="PAIS">
+                            <h:outputText value="#{Item.country}"/>
+                        </p:column>
+                        <p:column headerText="PROVINCIA">
+                            <h:outputText value="#{Item.province}"/>
+                        </p:column>
+                        <p:column headerText="CIUDAD">
+                            <h:outputText value="#{Item.city}"/>
+                        </p:column>
+                        <p:column headerText="SECTOR">
+                            <h:outputText value="#{Item.sector}"/>
+                        </p:column>
+                        <p:column headerText="">
+                            <p:commandButton value="Eliminar" process="@this" actionListener="#{studentBean.deleteAddress(Item)}" update=":containerForm:table_address"/>
+                        </p:column>
+                    </p:dataTable>
+
+                </p:dialog>
+
+
+
+
+                <p:dataTable id="studentDatatable" value="#{studentBean.studentList}" var="studentItem"
+                             widgetVar="list_table">
+
+                    <p:column headerText="NOMBRE">
+                        <h:outputText value="#{studentItem.firstname}" />
+                    </p:column>
+                    <p:column headerText="APELLIDO">
+                        <h:outputText value="#{studentItem.lastname}" />
+                    </p:column>
+
+                    <p:column headerText="FECHA INICIO">
+                        <h:outputText value="#{studentItem.dateStarted}"/>
+                    </p:column>
+                    <p:column headerText="TIPO IDENTIFICACION">
+                        <h:outputText value="#{studentItem.typeIdentification}"/>
+                    </p:column>
+                    <p:column headerText="IDENTIFICACION">
+                        <h:outputText value="#{studentItem.identification}" />
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton id="editRow" update=":containerForm:displayStudent :containerForm:tblphones :containerForm:table_address"  process="@this" oncomplete="PF('new_student_dlg').show()" icon="ui-icon-edit" title="Editar">
+                            <f:setPropertyActionListener value="#{studentItem}" target="#{studentBean.studentItem}" />
+                        </p:commandButton>
+                    </p:column>
+                    <!--<p:column headerText="">-->
+                        <!--<p:commandButton id="deleteRow" update=":containerForm:studentDatatable" process="@this" value="Eliminar" actionListener="#{studentBean.delete(studentItem)}" styleClass="btn-danger">-->
+                        <!--</p:commandButton>-->
+                    <!--</p:column>-->
+                </p:dataTable>
+
+                <h:panelGroup rendered="#{empty studentBean.studentList}">
+
+                </h:panelGroup>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

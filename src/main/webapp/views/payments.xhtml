@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestión de Pagos</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+                <p:commandButton id="openNewDialog" value="Nuevo" onclick="PF('new_payments_dlg').show();" type="button" styleClass="btn-primary"/>
+
+                <p:dialog id="modal_dialog" widgetVar="new_payments_dlg" modal="true" header="Nuevo Pago">
+                    <h:panelGrid columns="2">
+                        <!--
+                        <p:outputLabel value="Estudiante:"/>
+                        <p:autoComplete id="idStudent" minQueryLength="3"
+                                        value="#{transactionBean.transactionItem.idStudent}" effect="fade"
+                                        completeMethod="#{transactionBean.findStudent}"
+                                        converter="transactionConverter"
+                                />
+                        -->
+                        <p:outputLabel value="Estudiante:"/>
+                        <p:autoComplete id="idStudent"
+                                        completeMethod="#{transactionBean.findStudent}" var="c"
+                                        converter="studentConverter"
+                                        value="#{transactionBean.transactionItem.idStudent}" effect="fade"
+                                        itemLabel="#{c.firstname} #{c.lastname}" itemValue="#{c}"
+                                        emptyMessage="No se encuentran resultados."
+                                        maxResults="5" queryDelay="300">
+                                <p:ajax event="itemSelect" listener="#{transactionBean.studentSelected}" update="typeTransaction" />
+                        </p:autoComplete>
+
+                        <p:outputLabel value="Tipo Transaccion"/>
+                        <p:selectOneMenu
+                            id="typeTransaction"
+                            value="#{transactionBean.transactionItem.typeTransaction}" style="width: 100%">
+                            <f:selectItem itemLabel="Seleccione" itemValue="null"/>
+                            <f:selectItem itemLabel="Inscripcion" itemValue="1"/>
+                            <f:selectItem itemLabel="Colegiatura" itemValue="2"/>
+                            <f:selectItem itemLabel="Re-Inscripcion" itemValue="3"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Curso"/>
+                        <p:selectOneMenu
+                                id="course"
+                                style="width: 100%">
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="Monto:"/>
+                        <p:inputText value="#{transactionBean.transactionItem.value}" style="width: 100%;"/>
+                        <p:commandButton oncomplete="PF('new_payments_dlg').hide();" class="btn btn-default" value="Agregar" action="#{transactionBean.add}" update=":containerForm"/>
+                        <p:commandButton onclick="PF('new_payments_dlg').hide();" class="btn btn-default" value="Cerrar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+
+                <h:form id="table_content">
+                    <p:dataTable id="studentDatatable" value="#{transactionBean.transactionList}" var="transactionItem"
+                                 editable="true" widgetVar="list_table">
+                        <p:column headerText="Fecha">
+                            <p:cellEditor>
+                                <f:facet name="output">
+                                    <h:outputText value="#{transactionItem.date}" />
+                                </f:facet>
+                                <f:facet name="input">
+                                    <p:inputText value="#{date.date}" style="width:100%"/>
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        <p:column headerText="Estudiante">
+                            <p:cellEditor>
+                                <f:facet name="output">
+                                    <h:outputText value="#{transactionItem.idStudent}" />
+                                </f:facet>
+                                <f:facet name="input">
+                                    <p:inputText value="#{transactionItem.idStudent}" style="width:100%"/>
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        <p:column headerText="Valor">
+                            <p:cellEditor>
+                                <f:facet name="output">
+                                    <h:outputText value="#{transactionItem.value}" />
+                                </f:facet>
+                                <f:facet name="input">
+                                    <p:inputText value="#{transactionItem.value}" style="width:100%"/>
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+                <h:panelGroup rendered="#{empty transactionBean.transactionList}">
+                    <p>No hay pagos registrados.</p>
+                </h:panelGroup>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

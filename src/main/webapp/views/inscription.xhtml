@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Inscripcion de Estudiantes</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm" >
+                <p:commandButton id="openNewDialog" action="#{studentBean.newItem}" update=":containerForm:transactionPanel "
+                                 value="Nuevo" oncomplete="PF('new_transaction_dlg').show();" styleClass="btn-primary"
+                        />
+
+                <!--Dialog New Student-->
+                <p:dialog id="modal_dialog" widgetVar="new_transaction_dlg" modal="true">
+
+                    <h:panelGrid id="transactionPanel" columns="2">
+                        <p:outputLabel value="Estudiante:"/>
+                        <p:autoComplete id="idStudent"
+                                        completeMethod="#{transactionBean.findStudent}" var="c"
+                                        converter="studentConverter"
+                                        value="#{transactionBean.transactionItem.idStudent}" effect="fade"
+                                        itemLabel="#{c.firstname} #{c.lastname}" itemValue="#{c}"
+                                        emptyMessage="No se encuentran resultados."
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{transactionBean.studentSelected}" />
+                        </p:autoComplete>
+                        <p:outputLabel value="Curso:"/>
+                        <p:autoComplete id="idCourse"
+                                        completeMethod="#{transactionBean.findCourse}" var="c"
+                                        converter="courseConverter"
+                                        value="#{transactionBean.courseItem}" effect="fade"
+                                        itemLabel="#{c.name}" itemValue="#{c}"
+                                        emptyMessage="No se encuentran resultados."
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{transactionBean.courseSelected}" />
+                        </p:autoComplete>
+                        <p:outputLabel value="Monto:"/>
+                        <p:inputText id="value" value="#{transactionBean.transactionItem.value}" />
+
+                        <p:commandButton oncomplete="PF('new_transaction_dlg').hide();" class="btn btn-default" value="Guardar" action="#{transactionBean.add}" update=":containerForm"/>
+                        <p:commandButton onclick="PF('new_transaction_dlg').hide();" class="btn btn-default" value="Cerrar"/>
+                    </h:panelGrid>
+                </p:dialog>
+                <br/>
+                <p:dataTable id="transactionDatatable" value="#{transactionBean.transactionList}" var="transactionItem">
+                    <p:column headerText="ESTUDIANTE">
+                        <h:outputText value="#{transactionItem.idStudent.firstname} #{transactionItem.idStudent.lastname}" />
+                    </p:column>
+                    <p:column headerText="FECHA">
+                        <h:outputText value="#{transactionItem.date}" />
+                    </p:column>
+                    <p:column headerText="VALOR">
+                        <h:outputText value="#{transactionItem.value}" />
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

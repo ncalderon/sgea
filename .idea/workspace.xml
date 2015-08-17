@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6e987c5f-3040-46d1-bc44-cf81a32edc24" name="Default" comment="Correcion de errores con entidades">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="IBS-ACADEMIC.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="rebel.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/IBS-ACADEMIC$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1397136129215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="C:\Users\nathaniel01\IdeaProjects\ibs-academic" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/DataModels/PeriodDataModel.java" line="27" class="com.ibs.academic.controllers.DataModels.PeriodDataModel" package="com.ibs.academic.controllers.DataModels">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/DataModels/PeriodDataModel.java" line="34" class="com.ibs.academic.controllers.DataModels.PeriodDataModel" package="com.ibs.academic.controllers.DataModels">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/DataModels/PeriodDataModel.java" line="24" class="com.ibs.academic.controllers.DataModels.PeriodDataModel" package="com.ibs.academic.controllers.DataModels">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="IBS-ACADEMIC" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="TransactionsBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/TransactionsBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="31" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2856">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="19" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1343">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="55" selection-start="320" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOCourse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOCourse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="56" selection-start="324" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Course.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Course.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="14" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/MongoObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="18" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOStudent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOStudent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="29" selection-start="1530" selection-end="1567" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/StudentBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="23" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0" vertical-offset="687" max-vertical-offset="3502">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOResult.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="30" selection-start="343" selection-end="343" vertical-scroll-proportion="0.28280962" vertical-offset="0" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Grade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Period.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOPeriod.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/PeriodSubject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOGrade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Tutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOStudentPeriod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/StudentPeriod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOPeriodSubject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/period.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/DataModels/PeriodDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/StudentCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/AssistanceBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layout/template.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/periodos.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/PeriodBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/EmployeeBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/StudentBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/SubjectConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/EmployeeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/SubjectBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/subject.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/employee.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/course.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/TransactionsBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/Dummy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/SubjectCourseConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/SubjectCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOSubject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOSubjectCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOStudent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/SubjectResult.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/CourseBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/result.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/ResultBean.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\apache-maven-3.2.1" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBS-ACADEMIC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBS-ACADEMIC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibs-academic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBS-ACADEMIC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibs-academic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBS-ACADEMIC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibs-academic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rebel.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="options.lastSelected" value="com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="134" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="164" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="831" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="219" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="637" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\D\Proyecto de Sistemas\ibs-academic\ibs-academic\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nathaniel01\IdeaProjects\ibs-academic" />
+      <recent name="C:\D\Proyecto de Sistemas\ibs-academic\ibs-academic\src\main\webapp\views" />
+      <recent name="C:\D\Proyecto de Sistemas\ibs-academic\ibs-academic\src\main\webapp" />
+      <recent name="C:\D\Proyecto de Sistemas\ibs-academic\ibs-academic\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Dummy" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ibs.academic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.ibs.academic.Dummy" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="IBS-ACADEMIC" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.12" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <deployment>
+        <artifact name="IBS-ACADEMIC:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_IBS-ACADEMIC_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50270" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="53190" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Executor" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="IBS-ACADEMIC:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Dummy" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e987c5f-3040-46d1-bc44-cf81a32edc24" name="Default" comment="" />
+      <created>1393981621016</created>
+      <updated>1393981621016</updated>
+      <workItem from="1393981625130" duration="6972000" />
+      <workItem from="1393992740668" duration="2595000" />
+      <workItem from="1393996157827" duration="139000" />
+      <workItem from="1393999137418" duration="1570000" />
+      <workItem from="1395240013811" duration="1370000" />
+      <workItem from="1395340319314" duration="93000" />
+      <workItem from="1395340482349" duration="315000" />
+      <workItem from="1395616420749" duration="11000" />
+      <workItem from="1395617094549" duration="606000" />
+      <workItem from="1395666477847" duration="56000" />
+      <workItem from="1395671308257" duration="2008000" />
+      <workItem from="1395697195502" duration="12516000" />
+      <workItem from="1395789252332" duration="2556000" />
+      <workItem from="1395791867505" duration="48377000" />
+      <workItem from="1396488790640" duration="2610000" />
+      <workItem from="1396534138720" duration="8058000" />
+      <workItem from="1396751273575" duration="5182000" />
+      <workItem from="1396756484659" duration="3529000" />
+      <workItem from="1396765232321" duration="8966000" />
+      <workItem from="1396816992333" duration="7151000" />
+      <workItem from="1397049762809" duration="590000" />
+      <workItem from="1397051320428" duration="4297000" />
+      <workItem from="1397056338322" duration="23825000" />
+      <workItem from="1397084043867" duration="4654000" />
+      <workItem from="1397093907073" duration="13923000" />
+      <workItem from="1397108158485" duration="246000" />
+      <workItem from="1397108417448" duration="6568000" />
+      <workItem from="1397135357852" duration="4406000" />
+      <workItem from="1397139863446" duration="5274000" />
+      <workItem from="1397145964426" duration="22222000" />
+      <workItem from="1397177533784" duration="157000" />
+      <workItem from="1397184838549" duration="429000" />
+      <workItem from="1397185351174" duration="887000" />
+      <workItem from="1397186288520" duration="4765000" />
+      <workItem from="1397191551047" duration="2352000" />
+      <workItem from="1397193941789" duration="3136000" />
+      <workItem from="1397197114357" duration="420000" />
+      <workItem from="1397197554761" duration="10541000" />
+      <workItem from="1397236732935" duration="5402000" />
+      <workItem from="1397248287901" duration="618000" />
+      <workItem from="1397254007734" duration="30235000" />
+      <workItem from="1397284769653" duration="14514000" />
+      <workItem from="1397299364148" duration="2672000" />
+      <workItem from="1397306296055" duration="190000" />
+      <workItem from="1397307991275" duration="1806000" />
+      <workItem from="1397484133131" duration="1990000" />
+      <workItem from="1400011261027" duration="310000" />
+      <workItem from="1404539485681" duration="343000" />
+      <workItem from="1404543532800" duration="501000" />
+      <workItem from="1404545178717" duration="216000" />
+      <workItem from="1406229792244" duration="308000" />
+    </task>
+    <task id="LOCAL-00001" summary="firts commit">
+      <created>1393987133016</created>
+      <updated>1393987133016</updated>
+    </task>
+    <task id="LOCAL-00002" summary="FIRST commit">
+      <created>1393992876560</created>
+      <updated>1393992876560</updated>
+    </task>
+    <task id="LOCAL-00003" summary="FIRST commit&#10;">
+      <created>1393993080000</created>
+      <updated>1393993080000</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TITLE TEMPLATE CHANGED">
+      <created>1393994939880</created>
+      <updated>1393994939880</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Corrección de disparates de Natha">
+      <created>1395703000678</created>
+      <updated>1395703000678</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Corrección de disparates de Natha">
+      <created>1395706694325</created>
+      <updated>1395706694325</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Borrado de typeIn....">
+      <created>1395789678833</created>
+      <updated>1395789678833</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Creación de un CRUD simple de materias v.1">
+      <created>1395854637310</created>
+      <updated>1395854637310</updated>
+    </task>
+    <task id="LOCAL-00009" summary="B">
+      <created>1395964365770</created>
+      <updated>1395964365770</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Correcion de index&#10;Se comenzo a trabajar proceso de horario">
+      <created>1396757176550</created>
+      <updated>1396757176550</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Se elimino clase type">
+      <created>1396759939838</created>
+      <updated>1396759939838</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Se completo proceso de generacion de horario. 100%">
+      <created>1396808848938</created>
+      <updated>1396808848938</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Se mejoro modelo de datos">
+      <created>1397061912399</created>
+      <updated>1397061912399</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Mantemiento periodos: 50%">
+      <created>1397075283385</created>
+      <updated>1397075283385</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Se corrigio error en proceso de horario">
+      <created>1397096332541</created>
+      <updated>1397096332541</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Se corrigieron errores en proceso de generacion de horarios y se sometio a pruebas y fueron exitosas. ESTATUS DE PROCEDIMIENTO: 100%.">
+      <created>1397103453005</created>
+      <updated>1397103453005</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Se creo metodo para testiar registro de asistencia.">
+      <created>1397105439242</created>
+      <updated>1397105439242</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Se corrigio error en dummy">
+      <created>1397108970277</created>
+      <updated>1397108970277</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Se avanzo mantenimiento de periodo">
+      <created>1397146082468</created>
+      <updated>1397146082469</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Se avanzo mantenimiento de periodo">
+      <created>1397156372044</created>
+      <updated>1397156372044</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Se cambio estructura de datos">
+      <created>1397161672438</created>
+      <updated>1397161672438</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Se agregaron metodos primarios a entidades">
+      <created>1397163288694</created>
+      <updated>1397163288694</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commit test">
+      <created>1397177591287</created>
+      <updated>1397177591287</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Correcion de errores con entidades">
+      <created>1397186320499</created>
+      <updated>1397186320499</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Se completo mantenimiento de ejemplo (periodos.xhtml) para que se siga esa pratica.">
+      <created>1397188015297</created>
+      <updated>1397188015297</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Correcion de errores con entidades">
+      <created>1397189104872</created>
+      <updated>1397189104872</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Correcion de errores con entidades">
+      <created>1397193979148</created>
+      <updated>1397193979148</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Se avanzo pantalla de digitar resultados">
+      <created>1397196001117</created>
+      <updated>1397196001117</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Se avanzo mantenimiento de calificaciones">
+      <created>1397197405373</created>
+      <updated>1397197405373</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Se agrego manejo de embedded a mantenimiento de estudiantes">
+      <created>1397226487190</created>
+      <updated>1397226487190</updated>
+    </task>
+    <task id="LOCAL-00031" summary="test commit">
+      <created>1397226607751</created>
+      <updated>1397226607751</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Se comenzó mantenimiento de empleado">
+      <created>1397228243086</created>
+      <updated>1397228243086</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Se avanzo mantenimiento empleados">
+      <created>1397239137207</created>
+      <updated>1397239137207</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Se hizo correcion en mant de estudiantes y se avanzo cursos">
+      <created>1397257088544</created>
+      <updated>1397257088544</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Se avanzo mantenimiento de cursos">
+      <created>1397266981331</created>
+      <updated>1397266981331</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Se completo cursos">
+      <created>1397274672730</created>
+      <updated>1397274672730</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Se completo ciclo de generacion de horario">
+      <created>1397280310286</created>
+      <updated>1397280310287</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Se hizo correcion en generador de horarios">
+      <created>1397282519524</created>
+      <updated>1397282519524</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Se completo mant cursos">
+      <created>1397283585651</created>
+      <updated>1397283585651</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Se corrigio error de angel">
+      <created>1397283967003</created>
+      <updated>1397283967003</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Se completo registro de calificaciones">
+      <created>1397299422224</created>
+      <updated>1397299422224</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Se hizo correcion a proceso de generacion de horario.">
+      <created>1397300254719</created>
+      <updated>1397300254719</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Se hizo correcion de datos hardcode en resultbean">
+      <created>1397301692464</created>
+      <updated>1397301692464</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="282477000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26530612" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44027305" sideWeight="0.69561934" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34641638" sideWeight="0.30438066" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24169184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39590445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21710037" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2871212" sideWeight="0.39344263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3532423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4573379" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53583616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2871212" sideWeight="0.59016395" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41638225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3890785" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4573379" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34641638" sideWeight="0.30438066" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39590445" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24169184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3546798" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53583616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44197953" sideWeight="0.69561934" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23549488" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21710037" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Se corrigieron errores en proceso de generacion de horarios y se sometio a pruebas y fueron exitosas. ESTATUS DE PROCEDIMIENTO: 100%." />
+    <MESSAGE value="Se creo metodo para testiar registro de asistencia." />
+    <MESSAGE value="Se corrigio error en dummy" />
+    <MESSAGE value="Se avanzo mantenimiento de periodo" />
+    <MESSAGE value="Se cambio estructura de datos" />
+    <MESSAGE value="Se agregaron metodos primarios a entidades" />
+    <MESSAGE value="commit test" />
+    <MESSAGE value="Se completo mantenimiento de ejemplo (periodos.xhtml) para que se siga esa pratica." />
+    <MESSAGE value="Correcion de errores con entidades" />
+    <MESSAGE value="Se avanzo pantalla de digitar resultados" />
+    <MESSAGE value="Se avanzo mantenimiento de calificaciones" />
+    <MESSAGE value="Se agrego manejo de embedded a mantenimiento de estudiantes" />
+    <MESSAGE value="test commit" />
+    <MESSAGE value="Se comenzó mantenimiento de empleado" />
+    <MESSAGE value="Se avanzo mantenimiento empleados" />
+    <MESSAGE value="Se hizo correcion en mant de estudiantes y se avanzo cursos" />
+    <MESSAGE value="Se avanzo mantenimiento de cursos" />
+    <MESSAGE value="Se completo cursos" />
+    <MESSAGE value="Se completo ciclo de generacion de horario" />
+    <MESSAGE value="Se hizo correcion en generador de horarios" />
+    <MESSAGE value="Se completo mant cursos" />
+    <MESSAGE value="Se corrigio error de angel" />
+    <MESSAGE value="Se completo registro de calificaciones" />
+    <MESSAGE value="Se hizo correcion a proceso de generacion de horario." />
+    <MESSAGE value="Se hizo correcion de datos hardcode en resultbean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se hizo correcion de datos hardcode en resultbean" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layout/template.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="829" selection-end="829" vertical-scroll-proportion="0.38535032" vertical-offset="168" max-vertical-offset="2414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/TutorConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="9" selection-start="1094" selection-end="1308" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="388" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/PeriodBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="710" selection-end="710" vertical-scroll-proportion="-0.21019109" vertical-offset="236" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/SubjectConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="61" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.62460566" vertical-offset="414" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/subject.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="80" selection-start="591" selection-end="591" vertical-scroll-proportion="-2.6666667" vertical-offset="153" max-vertical-offset="1564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Period.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="-1.4358108" vertical-offset="578" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/period.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="1899" selection-end="1922" vertical-scroll-proportion="-3.2692308" vertical-offset="442" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="353" selection-end="366" vertical-scroll-proportion="0.6007067" vertical-offset="17" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/results.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="284" selection-end="284" vertical-scroll-proportion="-3.9230769" vertical-offset="51" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/Dummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="27" selection-start="584" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/CourseConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="596" selection-end="661" vertical-scroll-proportion="0.22077923" vertical-offset="0" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/EmployeeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="5" selection-start="674" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/Converters/SubjectCourseConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="75" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="23" selection-start="331" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/inscription.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="956" selection-end="1720" vertical-scroll-proportion="-1.3076923" vertical-offset="323" max-vertical-offset="1207" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/SubjectCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="4" selection-start="370" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1003" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/StudentCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/employee.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="831" selection-end="3622" vertical-scroll-proportion="-0.65384614" vertical-offset="306" max-vertical-offset="3553" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="24" selection-start="2507" selection-end="2525" vertical-scroll-proportion="-8.576923" vertical-offset="508" max-vertical-offset="3230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/course.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="34" selection-start="407" selection-end="407" vertical-scroll-proportion="6.269231" vertical-offset="350" max-vertical-offset="2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/result.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="97" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/SubjectResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/CourseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="8" selection-start="1451" selection-end="1565" vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOSubjectCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="10" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/UserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="11" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="1853" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/EmployeeBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="44" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="28" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/ResultBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/SubjectBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/schedule.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="67" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/scheduleBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="35" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/payments.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="42" selection-start="4183" selection-end="4183" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="5" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/TransactionsBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="31" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="55" selection-start="320" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="56" selection-start="324" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="14" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/models/MongoObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOStudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="29" selection-start="1530" selection-end="1567" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/controllers/StudentBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="23" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0" vertical-offset="687" max-vertical-offset="3502">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/morphia/morphia/0.106/morphia-0.106-sources.jar!/org/mongodb/morphia/dao/BasicDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="720" selection-end="720" vertical-scroll-proportion="0.35416666" vertical-offset="0" max-vertical-offset="4454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAORole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="422" selection-end="428" vertical-scroll-proportion="0.15711646" vertical-offset="136" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ibs/academic/dao/DAOResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="30" selection-start="343" selection-end="343" vertical-scroll-proportion="0.28280962" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>IBS-ACADEMIC:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>IBS-ACADEMIC</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:3.8.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

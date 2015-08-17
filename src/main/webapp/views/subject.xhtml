@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+
+        <ui:define name="titleContent">Gestión de Materias</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+
+                <h:panelGrid cellpadding="5" columns="1">
+                    <p:commandButton id="openNewDialog" action="#{subjectBean.newItem}" update=":containerForm:display"
+                                     value="Nuevo" oncomplete="PF('new_dialog_dlg').show();" styleClass="btn-primary"
+                            />
+                </h:panelGrid>
+                <br/>
+
+                <br></br>
+                <p:dialog header="Materia" id="modal_dialog" widgetVar="new_dialog_dlg" modal="true" position="center">
+                    <h:panelGrid id="display" columns="3">
+                        <h:outputLabel for="codigo" value="Codigo"/>
+                        <p:outputLabel id="codigo" value="#{subjectBean.item.id}"/>
+                        <p:message  for="codigo" display="icon"/>
+                        <h:outputLabel for="name" value="Nombre"/>
+                        <h:inputText id="name" value="#{subjectBean.item.name}" required="true" requiredMessage="Campo Nombre Requerido"/>
+                        <p:message  for="name" display="icon"/>
+                        <h:outputLabel for="status" value="Estatus"/>
+                        <p:selectOneMenu id="status" value="#{subjectBean.item.status}" style="width: 100%">
+                        <f:selectItem itemLabel="activo" itemValue="active"/>
+                        <f:selectItem itemLabel="inactiva" itemValue="inactive"/>
+                        </p:selectOneMenu>
+                        <p:message  for="status" display="icon"/>
+                        <f:facet name="footer">
+                            <p:commandButton oncomplete="PF('new_dialog_dlg').hide();"
+                                             class="btn btn-default"
+                                             action="#{subjectBean.add}"
+                                             update=":containerForm:tblsubject"
+                                             value="Guardar" />
+
+
+                            <p:commandButton onclick="PF('new_dialog_dlg').hide();" class="btn btn-default" value="Cancelar"/>
+                        </f:facet>
+                    </h:panelGrid>
+                </p:dialog>
+
+
+                <p:dataTable id="tblsubject" var="item" value="#{subjectBean.list}" widgetVar="list_table">
+
+                    <p:column headerText="Codigo">
+                        <h:outputText value="#{item.id}" />
+                    </p:column>
+
+                    <p:column headerText="Name">
+                        <h:outputText value="#{item.name}" />
+                    </p:column>
+
+                    <p:column headerText="Activa">
+                        <h:outputText value="#{item.status}" />
+                    </p:column>
+
+                    <p:column headerText="">
+                        <p:commandButton id="editRow" update=":containerForm:display"  process="@this" oncomplete="PF('new_dialog_dlg').show()" icon="ui-icon-edit" title="Editar">
+                            <f:setPropertyActionListener value="#{item}" target="#{subjectBean.item}" />
+                        </p:commandButton>
+                    </p:column>
+
+                    <!--<p:column headerText="">-->
+                        <!--<p:commandButton id="deleteRow" update=":containerForm:tblsubject" process="@this" value="Eliminar" actionListener="#{subjectBean.deleteRow(item)}" styleClass="btn-danger">-->
+                        <!--</p:commandButton>-->
+                    <!--</p:column>-->
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

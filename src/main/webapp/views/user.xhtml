@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+<h:body>
+    <ui:composition template="/layout/template.xhtml">
+        <ui:define name="titleContent">Gestion de Usuarios</ui:define>
+        <ui:define name="content">
+            <h:form id="containerForm">
+
+                <p:commandButton id="openNewDialog" value="Nuevo" onclick="PF('user_new_dlg').show();" type="button"  />
+                <!--Dialog New User-->
+                <p:dialog id="new_dialog" widgetVar="user_new_dlg" modal="true" header="#{!userBean.updateItem ? 'Nuevo Usuario' : 'Editar Usuario'}">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Nombre de Usuario"/>
+                        <p:inputText value="#{userBean.userItem.username}" style="width: 100%" />
+                        <p:outputLabel value="Contraseña"/>
+                        <h:inputSecret value="#{userBean.userItem.password}" style="width: 100%"/>
+                        <p:outputLabel value="Estado"/>
+                        <p:selectOneMenu value="#{userBean.userItem.status}" style="width: 100%">
+                            <f:selectItem itemLabel="Seleccione" itemValue=""/>
+                            <f:selectItem itemLabel="Activo" itemValue="active"/>
+                            <f:selectItem itemLabel="Inactivo" itemValue="inactive"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Rol"/>
+                        <p:selectOneMenu value="#{userBean.role}">
+                            <f:converter converterId="roleConverter"/>
+                            <f:selectItems value="#{userBean.roles}" var="r"
+                                    itemLabel="#{r.name}" itemValue="#{r}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Estudiante"/>
+                        <p:autoComplete id="id_student"
+                                        completeMethod="#{userBean.findStudent}" var="s"
+                                        value="#{userBean.userItem.student}" effect="fade"
+                                        converter="studentConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{s.firstname} #{s.lastname}" itemValue="#{s}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{userBean.studentSelected}"/>
+                        </p:autoComplete>
+                        <p:outputLabel value="Empleado"/>
+                        <p:autoComplete id="id_employee"
+                                        completeMethod="#{userBean.findEmployee}" var="e"
+                                        value="#{userBean.userItem.employee}" effect="fade"
+                                        converter="employeeConverter"
+                                        emptyMessage="No se encuentran resultados."
+                                        itemLabel="#{e.firstname} #{e.lastname}" itemValue="#{e}"
+                                        maxResults="5" queryDelay="300">
+                            <p:ajax event="itemSelect" listener="#{userBean.employeeSelected}"/>
+                        </p:autoComplete>
+                        <p:commandButton oncomplete="PF('user_new_dlg').hide();" rendered="#{!userBean.updateItem}" class="btn btn-default" value="Agregar" action="#{userBean.add}" update=":containerForm"/>
+                        <p:commandButton oncomplete="PF('user_new_dlg').hide();" rendered="#{userBean.updateItem}" class="btn btn-default" value="Guardar" action="#{userBean.save}" update=":containerForm"/>
+                        <p:commandButton onclick="PF('user_new_dlg').hide();" value="Cancelar"/>
+                    </h:panelGrid>
+                </p:dialog>
+
+                <!--User List-->
+                <p:dataTable id="userDataTable" value="#{userBean.userList}" var="userItem">
+                    <p:column headerText="USUARIO">
+                        <h:outputText value="#{userItem.username}"/>
+                    </p:column>
+                    <p:column headerText="ESTADO">
+                        <h:outputText value="#{userItem.status}"/>
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton id="deleteUserBtn" update=":containerForm" value="Eliminar" actionListener="#{userBean.delete(userItem)}" />
+                    </p:column>
+                    <p:column headerText="">
+                        <p:commandButton id="editUserBtn" value="Editar" action="#{userBean.edit(userItem)}" update=":containerForm" oncomplete="PF('user_new_dlg').show();"/>
+                    </p:column>
+                </p:dataTable>
+                <h:panelGroup rendered="#{empty userBean.userList}">
+                    <p>Tabla vacia, agrega nuevos usuarios.</p>
+                </h:panelGroup>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>
